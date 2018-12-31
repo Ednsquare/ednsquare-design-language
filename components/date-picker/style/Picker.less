@@ -40,6 +40,13 @@
 
   &-input {
     outline: none;
+    letter-spacing: @letter-spacing;
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: none;
+    }
   }
 
   &-input.@{ant-prefix}-input-sm {

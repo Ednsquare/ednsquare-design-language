@@ -38,7 +38,7 @@
     position: absolute;
     top: 0;
     color: @text-color-secondary;
-    font-family: Arial, 'Hiragino Sans GB', 'Microsoft Yahei', 'Microsoft Sans Serif', sans-serif;
+    font-family: @font-family;
     padding: 0 5px;
     font-size: 16px;
     display: inline-block;
@@ -111,6 +111,7 @@
     color: @input-color;
     background: @input-bg;
     .placeholder;
+    font-weight: 500;
   }
 
   &-week-number {
@@ -127,6 +128,7 @@
 
   &-body {
     padding: 8px 12px;
+    font-weight: 500;
   }
 
   table {
@@ -191,6 +193,7 @@
     &:hover {
       background: @item-hover-bg;
       cursor: pointer;
+      color: @blue-6;
     }
 
     &:active {
@@ -270,6 +273,7 @@
     border-top: @border-width-base @border-style-base @border-color-split;
     line-height: 38px;
     padding: 0 12px;
+    font-weight: 500;
     &:empty {
       border-top: 0;
     }
