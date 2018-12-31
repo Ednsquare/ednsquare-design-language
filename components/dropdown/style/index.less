@@ -48,7 +48,7 @@
     outline: none;
     position: relative;
     list-style-type: none;
-    padding: 4px 0;
+    padding: 8px 0;
     margin: 0;
     text-align: left;
     background-color: @component-background;
@@ -56,6 +56,7 @@
     box-shadow: @box-shadow-base;
     background-clip: padding-box;
     -webkit-transform: translate3d(0, 0, 0);
+    letter-spacing: @letter-spacing;
 
     &-item-group-title {
       color: @text-color-secondary;
@@ -104,11 +105,11 @@
       &-selected,
       &-selected > a {
         color: @primary-color;
-        background-color: @item-active-bg;
+        background-color: @blue-1;
       }
 
       &:hover {
-        background-color: @item-hover-bg;
+        background-color: @grey-3;
       }
 
       &-disabled {
