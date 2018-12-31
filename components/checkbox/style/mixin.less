@@ -12,7 +12,7 @@
     line-height: 1;
     position: relative;
     vertical-align: middle;
-    top: -0.09em;
+    top: -0.1em;
 
     .@{checkbox-prefix-cls}-wrapper:hover &-inner,
     &:hover &-inner,
@@ -60,7 +60,7 @@
         transform: rotate(45deg) scale(0);
         position: absolute;
         left: (@checkbox-size - @check-width) / 2 - 0.5px * (@checkbox-size / 14);
-        top: (@checkbox-size - @check-height) / 2 - 2px * (@checkbox-size / 14);
+        top: (@checkbox-size - @check-height) / 2 - 2.5px * (@checkbox-size / 14);
         display: table;
         width: @check-width;
         height: @check-height;
@@ -133,6 +133,7 @@
 
     & + span {
       color: @disabled-color;
+      letter-spacing: @letter-spacing;
       cursor: not-allowed;
     }
   }
@@ -151,6 +152,7 @@
   .@{checkbox-prefix-cls} + span {
     padding-left: 8px;
     padding-right: 8px;
+    letter-spacing: @letter-spacing;
   }
 
   .@{checkbox-prefix-cls}-group {
