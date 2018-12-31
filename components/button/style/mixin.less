@@ -65,13 +65,13 @@
   border-color: @color;
 
   &:hover {
-    .button-color(
-      @btn-primary-color; ~`colorPalette('@{color}', 5) `; ~`colorPalette('@{color}', 5) `
-    );
+    .button-color(@color; ~`colorPalette('@{color}', 5) `; ~`colorPalette('@{color}', 5) `);
+    background: @background;
   }
 
   &:focus {
-    .button-color(~`colorPalette('@{color}', 5) `; #fff; ~`colorPalette('@{color}', 5) `);
+    .button-color(~`colorPalette('@{color}', 5) `; @color; ~`colorPalette('@{color}', 5) `);
+    background: @background;
   }
 
   &:active,
@@ -79,6 +79,7 @@
     .button-color(
       @btn-primary-color; ~`colorPalette('@{color}', 7) `; ~`colorPalette('@{color}', 7) `
     );
+    background: @background;
   }
 
   .button-disabled();
@@ -228,7 +229,7 @@
   &:focus,
   &:active,
   &.active {
-    background: @btn-default-bg;
+    background: @blue-1;
     text-decoration: none;
   }
 }
@@ -242,11 +243,18 @@
 .btn-dashed() {
   .button-variant-other(@btn-default-color, @btn-default-bg, @btn-default-border);
   border-style: dashed;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background: @blue-1;
+    text-decoration: none;
+  }
 }
 
 // danger button style
 .btn-danger() {
-  .button-variant-danger(@btn-danger-color, @btn-danger-bg, @btn-danger-border);
+  .button-variant-danger(@btn-danger-color, @red-1, @btn-danger-border);
 }
 
 // circle button: the content only contains icon
