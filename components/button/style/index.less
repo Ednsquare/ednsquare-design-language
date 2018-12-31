@@ -5,9 +5,9 @@
 @btn-prefix-cls: ~'@{ant-prefix}-btn';
 
 // for compatible
-@btn-ghost-color: @text-color;
-@btn-ghost-bg: transparent;
-@btn-ghost-border: @border-color-base;
+@btn-ghost-color: @button-color;
+@btn-ghost-bg: #f5f5f5;
+@btn-ghost-border: transparent;
 
 // Button styles
 // -----------------------------
@@ -145,17 +145,17 @@
   }
 
   &-background-ghost {
-    background: transparent !important;
-    border-color: #fff;
-    color: #fff;
+    .button-variant-ghost(@button-color, @grey-3, @btn-ghost-border);
+    border-color: @btn-ghost-border !important;
+    box-shadow: none;
   }
 
   &-background-ghost&-primary {
-    .button-variant-ghost(@btn-primary-bg);
+    .button-variant-ghost(@primary-color, @blue-1, @btn-ghost-border);
   }
 
   &-background-ghost&-danger {
-    .button-variant-ghost(@btn-danger-color);
+    .button-variant-ghost(@error-color, @red-1, @btn-ghost-border);
   }
 
   &-two-chinese-chars:first-letter {

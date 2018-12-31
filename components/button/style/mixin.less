@@ -61,7 +61,8 @@
 }
 
 .button-variant-danger(@color; @background; @border) {
-  .button-color(@color; @background; @border);
+  .button-color(@color; transparent; @border);
+  border-color: @color;
 
   &:hover {
     .button-color(
@@ -83,18 +84,23 @@
   .button-disabled();
 }
 
-.button-variant-ghost(@color) {
+.button-variant-ghost(@color, @background, @border) {
   .button-color(@color; transparent; @color);
   text-shadow: none;
 
   &:hover,
   &:focus {
-    .button-color(~`colorPalette('@{color}', 5) `; transparent; ~`colorPalette('@{color}', 5) `);
+    .button-color(
+      ~`colorPalette('@{color}', 5) `; ~`colorPalette('@{color}', 5) `;
+        ~`colorPalette('@{color}', 5) `
+    );
+    background: @background;
   }
 
   &:active,
   &.active {
-    .button-color(~`colorPalette('@{color}', 7) `; transparent; ~`colorPalette('@{color}', 7) `);
+    .button-color(~`colorPalette('@{color}', 5) `; transparent; ~`colorPalette('@{color}', 5) `);
+    background: @background;
   }
 
   .button-disabled();
@@ -172,6 +178,7 @@
   transition: all 0.3s @ease-in-out;
   position: relative;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+  letter-spacing: @letter-spacing;
 
   > .@{iconfont-css-prefix} {
     line-height: 1;
