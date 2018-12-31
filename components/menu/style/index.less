@@ -54,7 +54,7 @@
 
   &-item > a {
     display: block;
-    color: @menu-item-color;
+    color: @grey-8;
     &:hover {
       color: @menu-highlight-color;
     }
@@ -99,7 +99,7 @@
   }
 
   &-item-selected {
-    color: @menu-highlight-color;
+    color: @grey-8;
     > a,
     > a:hover {
       color: @menu-highlight-color;
@@ -183,6 +183,7 @@
       border-radius: @border-radius-base;
       z-index: @zindex-dropdown;
       background: @menu-popup-bg;
+      letter-spacing: @letter-spacing;
 
       .submenu-title-wrapper {
         padding-right: 20px;
@@ -272,7 +273,7 @@
   &-vertical &-submenu-selected,
   &-vertical-left &-submenu-selected,
   &-vertical-right &-submenu-selected {
-    color: @menu-highlight-color;
+    color: grey-8;
     > a {
       color: @menu-highlight-color;
     }
@@ -284,6 +285,7 @@
     box-shadow: none;
     line-height: 46px;
     white-space: nowrap;
+    letter-spacing: @letter-spacing;
 
     > .@{menu-prefix-cls}-item,
     > .@{menu-prefix-cls}-submenu {
@@ -291,13 +293,14 @@
       top: 1px;
       display: inline-block;
       vertical-align: bottom;
-      border-bottom: 2px solid transparent;
+      border-bottom: 3px solid transparent;
+      font-weight: 500;
 
       &:hover,
       &-active,
       &-open,
       &-selected {
-        border-bottom: 2px solid @menu-highlight-color;
+        border-bottom: 3px solid @menu-highlight-color;
         color: @menu-highlight-color;
       }
     }
@@ -330,6 +333,7 @@
   &-vertical-left,
   &-vertical-right,
   &-inline {
+    letter-spacing: @letter-spacing;
     .@{menu-prefix-cls}-item {
       position: relative;
       &:after {
@@ -338,7 +342,7 @@
         right: 0;
         top: 0;
         bottom: 0;
-        border-right: @menu-item-active-border-width solid @menu-highlight-color;
+        border-right: @menu-item-active-border-width solid @grey-8;
         transform: scaleY(0.0001);
         opacity: 0;
         transition: transform 0.15s @ease-out, opacity 0.15s @ease-out;
