@@ -31,10 +31,10 @@
   &-loading-icon,
   &:after {
     position: absolute;
-    width: @switch-height - 4px;
-    height: @switch-height - 4px;
-    left: 1px;
-    top: 1px;
+    width: @switch-height + 8px;
+    height: @switch-height + 8px;
+    left: -8px;
+    top: -7px;
     border-radius: 18px;
     background-color: @component-background;
     content: ' ';
@@ -57,7 +57,7 @@
     background: transparent;
     z-index: 1;
     display: none;
-    font-size: 12px;
+    font-size: 22px;
     svg {
       position: absolute;
       left: 0;
@@ -98,8 +98,8 @@
     }
 
     &:after {
-      width: @switch-sm-height - 4px;
-      height: @switch-sm-height - 4px;
+      width: @switch-sm-height + 8px;
+      height: @switch-sm-height + 8px;
     }
 
     &:active:before,
@@ -109,8 +109,8 @@
   }
 
   &-small &-loading-icon {
-    width: @switch-sm-height - 4px;
-    height: @switch-sm-height - 4px;
+    width: @switch-sm-height + 8px;
+    height: @switch-sm-height + 8px;
   }
 
   &-small&-checked {
@@ -135,20 +135,21 @@
     background-color: @switch-color;
 
     .@{switch-prefix-cls}-inner {
-      margin-left: 6px;
-      margin-right: 24px;
+      margin-left: 8px;
+      margin-right: 26px;
+      letter-spacing: @letter-spacing;
     }
 
     &:after {
       left: 100%;
       transform: translateX(-100%);
-      margin-left: -1px;
+      margin-left: 8px;
     }
   }
 
   &-checked &-loading-icon {
     left: 100%;
-    margin-left: -19px;
+    margin-left: -22px;
   }
 
   &-loading,
