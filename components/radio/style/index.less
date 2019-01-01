@@ -10,6 +10,7 @@
   .reset-component;
   display: inline-block;
   line-height: unset;
+  letter-spacing: @letter-spacing;
 }
 
 // 一般状态
@@ -19,6 +20,7 @@
   position: relative;
   white-space: nowrap;
   margin-right: 8px;
+  letter-spacing: @letter-spacing;
   cursor: pointer;
 }
 
@@ -61,8 +63,8 @@
       position: absolute;
       width: @radio-dot-size;
       height: @radio-dot-size;
-      left: (@radio-size - @radio-dot-size) / 2 - 1px;
-      top: (@radio-size - @radio-dot-size) / 2 - 1px;
+      left: (@radio-size - @radio-dot-size) / 2 - 2px;
+      top: (@radio-size - @radio-dot-size) / 2 - 2px;
       border-radius: @radio-dot-size;
       display: table;
       border-top: 0;
@@ -80,7 +82,7 @@
     display: block;
     width: @radio-size;
     height: @radio-size;
-    border-width: 1px;
+    border-width: 2px;
     border-style: solid;
     border-radius: 100px;
     border-color: @border-color-base;
@@ -135,12 +137,14 @@
 span.@{radio-prefix-cls} + * {
   padding-left: 8px;
   padding-right: 8px;
+  vertical-align: top;
+  line-height: 1.7;
 }
 
 .@{radio-prefix-cls}-button-wrapper {
   margin: 0;
   height: @btn-height-base;
-  line-height: @btn-height-base - 2px;
+  line-height: @btn-height-base - 4px;
   color: @radio-button-color;
   display: inline-block;
   transition: all 0.3s ease;
