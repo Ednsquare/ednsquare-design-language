@@ -33,7 +33,7 @@
     width: @upload-picture-card-size;
     height: @upload-picture-card-size;
     border-radius: @border-radius-base;
-    background-color: @background-color-light;
+    background-color: transparent;
     text-align: center;
     cursor: pointer;
     transition: border-color 0.3s ease;
@@ -41,6 +41,7 @@
     margin-right: 8px;
     margin-bottom: 8px;
     display: table;
+    letter-spacing: @letter-spacing;
 
     > .@{upload-prefix-cls} {
       width: 100%;
@@ -65,7 +66,8 @@
     width: 100%;
     height: 100%;
     position: relative;
-    background: @background-color-light;
+    background: transparent;
+    letter-spacing: @letter-spacing;
 
     .@{upload-prefix-cls} {
       padding: 16px 0;
