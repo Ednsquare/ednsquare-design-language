@@ -12,14 +12,11 @@
 
 .@{collapse-prefix-cls} {
   .reset-component;
-  background-color: @collapse-header-bg;
   border-radius: @border-radius-base;
-  border: @border-width-base @border-style-base @border-color-base;
   border-bottom: 0;
+  letter-spacing: @letter-spacing;
 
   & > &-item {
-    border-bottom: @border-width-base @border-style-base @border-color-base;
-
     &:last-child {
       &,
       & > .@{collapse-prefix-cls}-header {
@@ -30,10 +27,12 @@
     > .@{collapse-prefix-cls}-header {
       line-height: 22px;
       padding: @collapse-header-padding;
-      color: @heading-color;
+      color: @text-color;
       cursor: pointer;
       position: relative;
       transition: all 0.3s;
+      border-bottom: @border-width-base @border-style-base @border-color-base;
+      font-weight: 500;
 
       .arrow {
         .iconfont-mixin();
@@ -71,7 +70,6 @@
     overflow: hidden;
     color: @text-color;
     background-color: @collapse-content-bg;
-    border-top: @border-width-base @border-style-base @border-color-base;
 
     & > &-box {
       padding: @collapse-content-padding;
@@ -94,8 +92,7 @@
     }
   }
 
-  &-borderless {
-    background-color: @component-background;
+  &-borderless > &-item > &-header {
     border: 0;
   }
 
