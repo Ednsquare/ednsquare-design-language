@@ -74,6 +74,7 @@
 
     box-sizing: border-box;
     display: block;
+    letter-spacing: @letter-spacing;
 
     background-color: @component-background;
     border-radius: @border-radius-base;
@@ -445,6 +446,8 @@
     display: none;
   }
 
+  letter-spacing: @letter-spacing;
+
   background-color: @component-background;
   box-shadow: @box-shadow-base;
   border-radius: @border-radius-base;
@@ -461,8 +464,9 @@
     margin-bottom: 0;
     padding-left: 0; // Override default ul/ol
     list-style: none;
-    max-height: 250px;
+    max-height: 350px;
     overflow: auto;
+    padding: 8px 0;
 
     &-item-group-list {
       margin: 0;
@@ -498,9 +502,11 @@
       overflow: hidden;
       text-overflow: ellipsis;
       transition: background 0.3s ease;
+      letter-spacing: @letter-spacing;
+      font-family: @font-family;
 
       &:hover {
-        background-color: @item-hover-bg;
+        background-color: @grey-3;
       }
 
       &:first-child {
@@ -525,14 +531,14 @@
       &-selected {
         &,
         &:hover {
-          background-color: @background-color-light;
+          background-color: @grey-3;
           font-weight: 600;
           color: @text-color;
         }
       }
 
       &-active {
-        background-color: @item-active-bg;
+        background-color: @grey-3;
       }
 
       &-divider {
